@@ -31,3 +31,15 @@ def registration(request):
                       fail_silently=False )
             return HttpResponse('registration form is successful check in admin')        
     return render(request,'registration.html',d)
+
+
+
+# ------------------home page------------------
+
+def home(request):
+    if request.session.get('username'):
+        username=request.session.get('username')
+        d={'username':username}
+        return render(request,'home.html',d)
+    return render(request,'home.html')
+
