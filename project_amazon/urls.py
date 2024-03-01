@@ -27,5 +27,11 @@ urlpatterns = [
     path('user_login/',user_login,name='user_login'),
     path('reset_password/',reset_password,name='reset_password'),
     path('user_logout/',user_logout,name='user_logout'),
+    path('display_details/',display_details,name='display_details'),
+    path('change_password/',change_password,name='change_password'),
+    path('mobiles/',mobiles,name='mobiles'),
+    path('today_deals/',today_deals,name='today_deals'),
+    path('amazon_mini_tv/',amazon_mini_tv,name='amazon_mini_tv'),
+    path('Homee/',Homee,name='Homee'),
 
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

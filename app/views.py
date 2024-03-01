@@ -84,3 +84,44 @@ def reset_password(request):
 def user_logout(request):
     logout(request)
     return HttpResponseRedirect(reverse('home'))
+
+# -------------details----------------
+@login_required
+def display_details(request):
+    username=request.session.get('username')
+    UO=User.objects.get(username=username)
+    PO=Profile.objects.get(username=UO)
+    d={'UO':UO,'PO':PO}
+    return render(request,'display_details.html',d)
+
+# -----------password change---------------
+@login_required
+def change_password(request):
+    if request.method=='POST':
+        pw=request.POST['pw']
+        username=request.session.get('username')
+        UO=User.objects.get(username=username)
+        UO.set_password(pw)
+        UO.save()
+        return HttpResponse('password was changed')
+    return render(request,'change_password.html')
+
+# -----------mobile------------
+
+def mobiles(request):
+    return render(request,'mobiles.html')
+
+# -----------deals-----------
+
+def today_deals(request):
+    return render(request,'today_deals.html')
+
+# -----------amazon-mini-tv---------
+
+def amazon_mini_tv(request):
+    return render(request,'amazon_mini_tv.html')
+
+# ------------homee------------
+
+def Homee(request):
+    return render(request,'Homee.html')
