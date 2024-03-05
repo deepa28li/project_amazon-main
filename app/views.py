@@ -125,3 +125,21 @@ def amazon_mini_tv(request):
 
 def Homee(request):
     return render(request,'Homee.html')
+
+# -----------series----------
+def webseries(request):
+    return render(request,'webseries.html')
+
+# ---------films----------
+def short_films(request):
+    return render(request,'short_films.html')
+
+# ---------comdey-------------
+def comedy(request):
+    return render(request,'comedy.html')
+
+# -------------electronic--------------
+
+def Electronics(request):
+    return render(request,'Electronics.html')
+

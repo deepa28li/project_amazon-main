@@ -33,5 +33,9 @@ urlpatterns = [
     path('today_deals/',today_deals,name='today_deals'),
     path('amazon_mini_tv/',amazon_mini_tv,name='amazon_mini_tv'),
     path('Homee/',Homee,name='Homee'),
+    path('webseries/',webseries,name='webseries'),
+    path('short_films/',short_films,name='short_films'),
+    path('comedy/',comedy,name='comedy'),
+    path('Electronics/',Electronics,name='Electronics'),
 
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
